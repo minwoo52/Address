@@ -28,9 +28,8 @@
       console.log("onReceivedActivityMessageViaJavascriptInterface "+event);
     }
 
-    function postMessage11(postData) {
-      window.mw.ss("adf");
-      alert("c");
+    function postData(postData) {
+      window.androidInterface.setPostData(postData);
         // window.webkit.messageHandlers.callBackHandler.postMessage(postData);
     }
 
@@ -51,7 +50,7 @@
               jibunAddress : jibunAddress,
               zonecode : data.zonecode
           };
-          window.postMessage11(postData);
+          window.postData(postData);
         },
         width : '100%',
         height : '100%'
