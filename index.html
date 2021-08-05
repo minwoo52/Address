@@ -28,8 +28,8 @@
       console.log("onReceivedActivityMessageViaJavascriptInterface "+event);
     }
 
-    function postData(postData) {
-      window.Android.setPostData(postData);
+    function postData(a, b, c) {
+      window.Android.setPostData(a, b, c);
         // window.webkit.messageHandlers.callBackHandler.postMessage(postData);
     }
 
@@ -45,12 +45,7 @@
             jibunAddress = data.jibunAddress
           }
 
-          var postData = {
-              roadAddress : data.roadAddress,
-              jibunAddress : jibunAddress,
-              zonecode : data.zonecode
-          };
-          window.postData(postData);
+          window.postData(data.roadAddress, jibunAddress,  data.zonecode);
         },
         width : '100%',
         height : '100%'
