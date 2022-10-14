@@ -27,7 +27,7 @@
 
     function postData(roadAddress, jibunAddress, zoneCode) {
       window.Android.setPostData(roadAddress, jibunAddress, zoneCode);
-        // window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+      window.webkit.messageHandlers.callBackHandler.postMessage(postData);
     }
 
     var element_layer = document.getElementById('layer');
